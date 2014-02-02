@@ -1,4 +1,0 @@
-WMSSolution
-===========
-
-WMS Application Solution
