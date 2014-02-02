@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CF7B898-B227-43D5-8A91-F77C0AB8324D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMSSolution</RootNamespace>
+    <AssemblyName>WMSSolution</AssemblyName>
+    <StartPageUrl>Form1.wgx</StartPageUrl>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartPageUrl>Form1.wgx</StartPageUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gizmox.WebGUI.Forms.Extended, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=85eae29607c9f5f3, processorArchitecture=MSIL" />
+    <Reference Include="Gizmox.WebGUI.Forms.Office, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=d50c2c7452ba77d9, processorArchitecture=MSIL" />
+    <Reference Include="Gizmox.WebGUI.Forms.Professional, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=6b5c571512bede7c, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.7.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.7.4\Assemblies\v4.0\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.7.4\Assemblies\v4.0\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Gizmox.WebGUI.Forms, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=c508b41386c60f1d">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Common, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=263fa4ef694acff6">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Server, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=3de6eb684226c24d">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\warehouse-icon-2.png" />
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cls\clsLookUp.cs" />
+    <Compile Include="cls\clsSystemNumber.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\f_listhelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\f_listhelper.Designer.cs">
+      <DependentUpon>f_listhelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\f_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\f_order.Designer.cs">
+      <DependentUpon>f_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\f_order_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\f_order_detail.Designer.cs">
+      <DependentUpon>f_order_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Master Reference\BusinessPartner\f_bp_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Master Reference\BusinessPartner\f_bp_ref.Designer.cs">
+      <DependentUpon>f_bp_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Master Reference\ClientConfiguration\Clients\f_clients_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Master Reference\ClientConfiguration\Clients\f_clients_ref.Designer.cs">
+      <DependentUpon>f_clients_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Master Reference\f_items_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Master Reference\f_items_ref.Designer.cs">
+      <DependentUpon>f_items_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_areas_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_areas_ref.Designer.cs">
+      <DependentUpon>f_areas_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_code_list_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_code_list_ref.designer.cs">
+      <DependentUpon>f_code_list_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_locations_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_locations_ref.Designer.cs">
+      <DependentUpon>f_locations_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_warehouses_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_warehouses_ref.Designer.cs">
+      <DependentUpon>f_warehouses_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_zones_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Master Reference\WarehouseConfiguration\f_zones_ref.Designer.cs">
+      <DependentUpon>f_zones_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="References\Roles Management\f_users_ref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References\Roles Management\f_users_ref.Designer.cs">
+      <DependentUpon>f_users_ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\f_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\f_report.Designer.cs">
+      <DependentUpon>f_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\f_server_command.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\f_server_command.Designer.cs">
+      <DependentUpon>f_server_command.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipment\f_shipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipment\f_shipment.Designer.cs">
+      <DependentUpon>f_shipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipment\f_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipment\f_test.Designer.cs">
+      <DependentUpon>f_test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="f_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_login.Designer.cs">
+      <DependentUpon>f_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_mainmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_mainmenu.Designer.cs">
+      <DependentUpon>f_mainmenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="f_login.resx">
+      <DependentUpon>f_login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_mainmenu.resx">
+      <DependentUpon>f_mainmenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\f_listhelper.resx">
+      <DependentUpon>f_listhelper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\f_order.resx">
+      <DependentUpon>f_order.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\f_order_detail.resx">
+      <DependentUpon>f_order_detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Master Reference\BusinessPartner\f_bp_ref.resx">
+      <DependentUpon>f_bp_ref.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Master Reference\ClientConfiguration\Clients\f_clients_ref.resx">
+      <DependentUpon>f_clients_ref.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Master Reference\f_items_ref.resx">
+      <DependentUpon>f_items_ref.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Master Reference\WarehouseConfiguration\f_areas_ref.resx">
+      <DependentUpon>f_areas_ref.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Master Reference\WarehouseConfiguration\f_code_list_ref.resx">
+      <DependentUpon>f_code_list_ref.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Master Reference\WarehouseConfiguration\f_locations_ref.resx">
+      <DependentUpon>f_locations_ref.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Master Reference\WarehouseConfiguration\f_warehouses_ref.resx">
+      <DependentUpon>f_warehouses_ref.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Master Reference\WarehouseConfiguration\f_zones_ref.resx">
+      <DependentUpon>f_zones_ref.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="References\Roles Management\f_users_ref.resx">
+      <DependentUpon>f_users_ref.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\f_report.resx">
+      <DependentUpon>f_report.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\f_server_command.resx">
+      <DependentUpon>f_server_command.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipment\f_shipment.resx">
+      <DependentUpon>f_shipment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipment\f_test.resx">
+      <DependentUpon>f_test.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Inbound\Acceptance\" />
+    <Folder Include="InventoryManagement\CycleCount\" />
+    <Folder Include="Outbound\CancelOrder\" />
+    <Folder Include="Properties\" />
+    <Folder Include="References\Roles Management\Assign Roles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Condition="" Project="$(MSBuildExtensionsPath)\Gizmox\v10.0\Gizmox.VWGApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2359</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
